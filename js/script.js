@@ -9,6 +9,8 @@ window.onload = function()
   download = document.getElementById("download");
   context = canvas.getContext("2d");
   image = new Image();
+  image.addEventListener('load', showPhoto);
+  image.addEventListener('error', invalidPhoto);
 }
 
 function selectPhoto()
@@ -24,20 +26,32 @@ function loadPhoto(input)
     reader.onload = function (e)
     {
       image.src = e.target.result;
-      canvas.width = image.width;
-      canvas.height = image.height;
-      canvas.style.display = "block";
-      slices.style.display = "block";
-      download.style.display = "block";
-      setTimeout(function() { divide(); }, 500);
     };
 
     reader.readAsDataURL(input.files[0]);
   }
 }
 
+function showPhoto()
+{
+  canvas.width = image.width;
+  canvas.height = image.height;
+  canvas.style.display = "block";
+  slices.style.display = "block";
+  download.style.display = "block";
+  divide();
+}
+
+function invalidPhoto()
+{
+  canvas.style.display = "none";
+  slices.style.display = "none";
+  download.style.display = "none";
+}
+
 function divide()
 {
+
   var n = count.value;
 
   if( n <= 0)

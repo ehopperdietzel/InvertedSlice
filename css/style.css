@@ -49,6 +49,7 @@
 canvas
 {
   max-width: 70%;
+  max-height: 512px;
   display:none;
   background:#CCC;
 }
