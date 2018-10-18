@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>Inverted Slice</title>
+
+  <meta charset="utf-8">
+
+  <script src="js/script.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <center>
+    <input id="filePicker" type="file" onchange="loadPhoto(this)"/>
+    <button onclick="selectPhoto()" id="upload">Seleccionar Foto</button>
+    <div id="slices">
+      Divisiones<br> <input id="count" type="number" value="0" onchange="divide()"/>
+    </div>
+    <canvas id="canvas"></canvas><br>
+    <button id="download" onclick="downloadPhoto()">Descargar</button>
+  </center>
+</body>
+</html>

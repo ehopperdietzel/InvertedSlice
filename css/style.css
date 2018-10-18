@@ -1,0 +1,54 @@
+*
+{
+  font-family:helvetica;
+  color:#444;
+}
+#filePicker
+{
+  display:none;
+}
+#upload
+{
+  border:0.5px solid #CCC;
+  background:#444;
+  color:#FFF;
+  padding:20px;
+  width:300px;
+  border-radius: 10px;
+  cursor:pointer;
+  font-size: 13px;
+}
+#download:hover,#upload:hover
+{
+  opacity:0.9;
+}
+#slices
+{
+  display: none;
+  font-size: 13px;
+  margin:20px;
+}
+#slices input
+{
+  border-radius: 6px;
+  border:0.5px solid #CCC;
+  padding:5px;
+}
+#download
+{
+  display: none;
+  border:0.5px solid #CCC;
+  background:#44C;
+  color:#FFF;
+  padding:10px;
+  width:300px;
+  border-radius: 10px;
+  cursor:pointer;
+  font-size: 13px;
+}
+canvas
+{
+  max-width: 70%;
+  display:none;
+  background:#CCC;
+}
